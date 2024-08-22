@@ -25,7 +25,6 @@ Route::group(['middleware' => 'auth:sanctum'], function() {
     // Add ONE line to assign 5 resource routes to TaskController
     // Put one code line here below
    
-        Route::prefix('api/v1')->group(base_path('routes/auth.php'));
-        Route::resource('tasks',TaskController::class);
-    
+    Route::apiResource('/api/v1/tasks',TaskController::class);
+       
 });
